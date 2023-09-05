@@ -3,9 +3,10 @@ import { StyleSheet, Text, View } from 'react-native';
 import SignUpForm from './src/SignUpForm';
 import InitialPage from './src/InitialPage';
 import SignInForm from './src/SignInForm';
-import Home from './src/Home';
+import MainContainer from './src/MainContainer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SelectCar from './src/SelectCar';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,8 +27,12 @@ const App = () => {
           component={SignInForm}
         />
         <Stack.Screen
-          name = "Home"
-          component={Home}
+          name = "Main Screen"
+          component={MainContainer}
+        />
+        <Stack.Screen
+          name = "Select Car"
+          component={SelectCar}
         />
       </Stack.Navigator>
     </NavigationContainer>
